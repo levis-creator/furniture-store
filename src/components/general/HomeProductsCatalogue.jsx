@@ -1,10 +1,9 @@
-import ProductCard from "../products/ProductCard";
-import Link from "next/link";
-import { data } from "@/api/fakedata";
-import useDataContext from "@/hooks/useDataContext";
-import { useEffect } from "react";
 import { getAll } from "@/api/dummydata";
 import { SETDATA } from "@/constants";
+import useDataContext from "@/hooks/useDataContext";
+import Link from "next/link";
+import { useEffect } from "react";
+import ProductCard from "../products/ProductCard";
 const HomeProductsCatalogue = () => {
   const { dataSet, dispatch } = useDataContext();
   useEffect(() => {

@@ -1,7 +1,7 @@
-import { AiOutlineCopyright } from "react-icons/ai";
 import { contacts } from "@/api/contacts";
 import { menuItems } from "@/api/menuItems";
 import Link from "next/link";
+import { AiOutlineCopyright } from "react-icons/ai";
 import { BiHomeSmile } from "react-icons/bi";
 import { FaFacebook, FaWhatsapp } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";

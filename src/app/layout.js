@@ -1,8 +1,8 @@
-import Navbar from "@/components/general/Navbar";
-import "./globals.css";
-import { Quicksand } from "next/font/google";
 import Footer from "@/components/general/Footer";
+import Navbar from "@/components/general/Navbar";
 import { DataProvider } from "@/context/DataContext";
+import { Quicksand } from "next/font/google";
+import "./globals.css";
 
 const inter = Quicksand({ subsets: ["latin"] });
 

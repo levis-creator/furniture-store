@@ -1,14 +1,11 @@
 "use client";
+import HomeProductsCatalogue from "@/components/general/HomeProductsCatalogue";
 import FeatureProductCarousel from "@/components/home/FeatureProductCarousel";
 import HomeCategories from "@/components/home/HomeCategories";
-import HomeProductsCatalogue from "@/components/general/HomeProductsCatalogue";
-import Link from "next/link";
 import Testimonies from "@/components/home/Testimonies";
-import HomeImage from "../assets/spacejoy-IH7wPsjwomc-unsplash.jpg";
 import Image from "next/image";
-import { getAll } from "@/api/dummydata";
-import useDataContext from "@/hooks/useDataContext";
-import { SETDATA } from "@/constants";
+import Link from "next/link";
+import HomeImage from "../assets/spacejoy-IH7wPsjwomc-unsplash.jpg";
 const Home = async () => {
  
   return (

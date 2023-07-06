@@ -17,7 +17,6 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  
   return (
     <>
       <AnimatePresence>
@@ -52,10 +51,8 @@ const Navbar = () => {
         <div>Logo</div>
         <ul className="md:flex gap-9 hidden">
           {menuItems.map((items, i) => (
-            <li key={i} className="uppercase font-bold" >
-              <Link href={items.link}>
-                {items.title}
-              </Link>
+            <li key={i} className="uppercase font-bold">
+              <Link href={items.link}>{items.title}</Link>
             </li>
           ))}
         </ul>
