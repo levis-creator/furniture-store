@@ -3,10 +3,11 @@ import { CgClose } from "react-icons/cg";
 import { CiHeart, CiSearch, CiShoppingCart } from "react-icons/ci";
 import { HiMenuAlt3 } from "react-icons/hi";
 
-import { useEffect, useRef, useState } from "react";
+import { menuItems } from "@/api/menuItems";
 import Slidein from "@/templates/Slidein";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import { useRef, useState } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,24 +17,7 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  const menuItems = [
-    {
-      link: "/",
-      title: "Home",
-    },
-    {
-      link: "/shop",
-      title: "Shop",
-    },
-    {
-      link: "/about",
-      title: "About",
-    },
-    {
-      link: "/blog",
-      title: "Blog",
-    },
-  ];
+  
   return (
     <>
       <AnimatePresence>

@@ -1,6 +1,8 @@
 import Navbar from "@/components/general/Navbar";
 import "./globals.css";
 import { Quicksand } from "next/font/google";
+import Footer from "@/components/general/Footer";
+import { DataProvider } from "@/context/DataContext";
 
 const inter = Quicksand({ subsets: ["latin"] });
 
@@ -15,7 +17,8 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <div className="">
           <Navbar />
-          {children}
+          <DataProvider>{children}</DataProvider>
+          <Footer />
         </div>
       </body>
     </html>

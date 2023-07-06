@@ -6,17 +6,18 @@ const ProductCard = ({ data }) => {
       <div className="w-full text-center shadow-md rounded-md relative">
         <div className="absolute bg-red-700 text-white px-2 ">20% discount</div>
         <div className="absolute right-0 text-white px-2 bg-black">New</div>
-        <div className="bg-slate-100 inline-flex justify-center w-full">
+        <div className="bg-slate-100 inline-flex justify-center w-full h-52">
           <Image
-            src={data.image}
+            src={data.thumbnail}
+            unoptimized
             width={0}
             height={0}
             alt={data.title}
-            className="w-auto h-52 object-contain"
+            className="w-full h-full object-cover"
           />
         </div>
-        <p>product title</p>
-        <h3 className="font-semibold">Ksh. 500</h3>
+        <p>{data.title}</p>
+        <h3 className="font-semibold">Ksh. {data.price}</h3>
       </div>
     </Link>
   );

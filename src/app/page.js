@@ -1,3 +1,4 @@
+"use client";
 import FeatureProductCarousel from "@/components/home/FeatureProductCarousel";
 import HomeCategories from "@/components/home/HomeCategories";
 import HomeProductsCatalogue from "@/components/general/HomeProductsCatalogue";
@@ -5,7 +6,11 @@ import Link from "next/link";
 import Testimonies from "@/components/home/Testimonies";
 import HomeImage from "../assets/spacejoy-IH7wPsjwomc-unsplash.jpg";
 import Image from "next/image";
-export default function Home() {
+import { getAll } from "@/api/dummydata";
+import useDataContext from "@/hooks/useDataContext";
+import { SETDATA } from "@/constants";
+const Home = async () => {
+ 
   return (
     <>
       <div className="mt-20">
@@ -26,15 +31,22 @@ export default function Home() {
             </Link>
           </div>
           <div className="basis-1/2">
-          <Image src={HomeImage} width={0} height={0} alt="home image" className="h-60 w-full md:h-80 object-cover"/>
+            <Image
+              src={HomeImage}
+              width={0}
+              height={0}
+              alt="home image"
+              className="h-60 w-full md:h-80 object-cover"
+            />
           </div>
         </div>
         <div className="w-full text-center">
           <HomeCategories />
-          <HomeProductsCatalogue />
+          <HomeProductsCatalogue  />
           <Testimonies />
         </div>
       </div>
     </>
   );
-}
+};
+export default Home;
